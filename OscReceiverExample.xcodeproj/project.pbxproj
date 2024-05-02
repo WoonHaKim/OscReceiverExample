@@ -15,6 +15,8 @@
 		1F1D4BDB2BE39E0100D65359 /* OscReceiverExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D4BDA2BE39E0100D65359 /* OscReceiverExampleTests.swift */; };
 		1F1D4BE52BE39E0100D65359 /* OscReceiverExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D4BE42BE39E0100D65359 /* OscReceiverExampleUITests.swift */; };
 		1F1D4BE72BE39E0100D65359 /* OscReceiverExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D4BE62BE39E0100D65359 /* OscReceiverExampleUITestsLaunchTests.swift */; };
+		1F1D4BF52BE39E3D00D65359 /* OSCServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D4BF42BE39E3D00D65359 /* OSCServerManager.swift */; };
+		1F1D4BF82BE39EEF00D65359 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F1D4BF72BE39EEF00D65359 /* OSCKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		1F1D4BE02BE39E0100D65359 /* OscReceiverExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OscReceiverExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1D4BE42BE39E0100D65359 /* OscReceiverExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscReceiverExampleUITests.swift; sourceTree = "<group>"; };
 		1F1D4BE62BE39E0100D65359 /* OscReceiverExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscReceiverExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1F1D4BF42BE39E3D00D65359 /* OSCServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCServerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1D4BF82BE39EEF00D65359 /* OSCKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,7 @@
 				1F1D4BD92BE39E0100D65359 /* OscReceiverExampleTests */,
 				1F1D4BE32BE39E0100D65359 /* OscReceiverExampleUITests */,
 				1F1D4BC52BE39E0000D65359 /* Products */,
+				1F1D4BF62BE39EEF00D65359 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,7 @@
 				1F1D4BCB2BE39E0000D65359 /* Item.swift */,
 				1F1D4BCD2BE39E0100D65359 /* Assets.xcassets */,
 				1F1D4BCF2BE39E0100D65359 /* Preview Content */,
+				1F1D4BF42BE39E3D00D65359 /* OSCServerManager.swift */,
 			);
 			path = OscReceiverExample;
 			sourceTree = "<group>";
@@ -130,6 +136,13 @@
 			path = OscReceiverExampleUITests;
 			sourceTree = "<group>";
 		};
+		1F1D4BF62BE39EEF00D65359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +159,9 @@
 			dependencies = (
 			);
 			name = OscReceiverExample;
+			packageProductDependencies = (
+				1F1D4BF72BE39EEF00D65359 /* OSCKit */,
+			);
 			productName = OscReceiverExample;
 			productReference = 1F1D4BC42BE39E0000D65359 /* OscReceiverExample.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 1F1D4BBB2BE39E0000D65359;
+			packageReferences = (
+				1F1D4BF32BE39E1800D65359 /* XCRemoteSwiftPackageReference "OSCKit" */,
+			);
 			productRefGroup = 1F1D4BC52BE39E0000D65359 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1D4BF52BE39E3D00D65359 /* OSCServerManager.swift in Sources */,
 				1F1D4BCA2BE39E0000D65359 /* ContentView.swift in Sources */,
 				1F1D4BCC2BE39E0000D65359 /* Item.swift in Sources */,
 				1F1D4BC82BE39E0000D65359 /* OscReceiverExampleApp.swift in Sources */,
@@ -423,9 +443,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OscReceiverExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -440,6 +462,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.OscReceiverExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,9 +474,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OscReceiverExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -468,6 +493,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.OscReceiverExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -586,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F1D4BF32BE39E1800D65359 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/OSCKit?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F1D4BF72BE39EEF00D65359 /* OSCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F1D4BF32BE39E1800D65359 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F1D4BBC2BE39E0000D65359 /* Project object */;
 }
